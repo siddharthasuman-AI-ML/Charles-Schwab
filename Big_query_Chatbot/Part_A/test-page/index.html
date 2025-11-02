@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI - Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- BigQuery Chatbot Widget CSS -->
+    <link rel="stylesheet" href="../frontend/chatbot-widget.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="main-title">Power BI</h1>
+        <div class="info-box">
+            <h2>🎬 Demo Instructions</h2>
+            <ol>
+                <li>Make sure the backend server is running:
+                    <pre>cd backend && python app.py</pre>
+                </li>
+                <li>Click the chat icon in the bottom-right corner</li>
+                <li>Try asking questions like:
+                    <ul>
+                        <li>"Show me all customers"</li>
+                        <li>"Count total records"</li>
+                        <li>"Get top 5 customers by revenue"</li>
+                    </ul>
+                </li>
+            </ol>
+            <p><strong>Note:</strong> This is a demo version using mock data for demonstration purposes.</p>
+        </div>
+    </div>
+    
+    <!-- BigQuery Chatbot Widget JavaScript -->
+    <script src="../frontend/chatbot-widget.js"></script>
+    <script>
+        // Initialize the chatbot widget
+        ChatbotWidget.init({
+            apiUrl: 'http://localhost:8501',
+            position: 'bottom-right',
+            theme: 'light'
+        });
+    </script>
+</body>
+</html>
+
+

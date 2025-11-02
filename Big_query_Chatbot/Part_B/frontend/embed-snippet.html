@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigQuery Chatbot - Embed Snippet Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .code-block {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+        }
+        .note {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>BigQuery Chatbot - Integration Snippet</h1>
+    
+    <p>This page demonstrates how to embed the BigQuery Chatbot into your website.</p>
+    
+    <div class="note">
+        <strong>📋 Integration Instructions:</strong>
+        <p>Copy the code below and paste it just before the closing <code>&lt;/body&gt;</code> tag of your HTML page.</p>
+    </div>
+    
+    <h2>Basic Integration (Recommended)</h2>
+    <div class="code-block">
+        <code>&lt;!-- BigQuery Chatbot Widget --&gt;<br>
+&lt;link rel="stylesheet" href="path/to/chatbot-widget.css"&gt;<br>
+&lt;script src="path/to/chatbot-widget.js"&gt;&lt;/script&gt;<br>
+&lt;script&gt;<br>
+&nbsp;&nbsp;// Initialize chatbot when page loads<br>
+&nbsp;&nbsp;ChatbotWidget.init({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;apiUrl: 'http://localhost:8501', // Replace with your backend URL<br>
+&nbsp;&nbsp;&nbsp;&nbsp;position: 'bottom-right',<br>
+&nbsp;&nbsp;&nbsp;&nbsp;theme: 'light'<br>
+&nbsp;&nbsp;});<br>
+&lt;/script&gt;</code>
+    </div>
+    
+    <h2>Alternative: Auto-Initialize</h2>
+    <div class="code-block">
+        <code>&lt;!-- BigQuery Chatbot Widget (Auto-Initialize) --&gt;<br>
+&lt;link rel="stylesheet" href="path/to/chatbot-widget.css"&gt;<br>
+&lt;script&gt;<br>
+&nbsp;&nbsp;// Configuration will be picked up automatically<br>
+&nbsp;&nbsp;window.BQ_CHATBOT_CONFIG = {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;apiUrl: 'http://localhost:8501'<br>
+&nbsp;&nbsp;};<br>
+&lt;/script&gt;<br>
+&lt;script src="path/to/chatbot-widget.js"&gt;&lt;/script&gt;</code>
+    </div>
+    
+    <h2>Configuration Options</h2>
+    <div class="code-block">
+        <code>{<br>
+&nbsp;&nbsp;apiUrl: 'http://localhost:8501',&nbsp;&nbsp;// Backend API URL (required)<br>
+&nbsp;&nbsp;position: 'bottom-right',&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Widget position<br>
+&nbsp;&nbsp;theme: 'light'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 'light' or 'dark' (future)<br>
+}</code>
+    </div>
+    
+    <h2>Complete Example</h2>
+    <div class="code-block">
+        <code>&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="en"&gt;<br>
+&lt;head&gt;<br>
+&nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;My Website&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;h1&gt;My Website Content&lt;/h1&gt;<br>
+&nbsp;&nbsp;&lt;!-- Your website content here --&gt;<br>
+<br>
+&nbsp;&nbsp;&lt;!-- BigQuery Chatbot Integration --&gt;<br>
+&nbsp;&nbsp;&lt;link rel="stylesheet" href="frontend/chatbot-widget.css"&gt;<br>
+&nbsp;&nbsp;&lt;script src="frontend/chatbot-widget.js"&gt;&lt;/script&gt;<br>
+&nbsp;&nbsp;&lt;script&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ChatbotWidget.init({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apiUrl: 'http://localhost:8501'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+&nbsp;&nbsp;&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;</code>
+    </div>
+    
+    <div class="note">
+        <strong>⚠️ Important:</strong>
+        <ul>
+            <li>Make sure the backend server is running before testing the widget</li>
+            <li>Update <code>apiUrl</code> to point to your production backend URL</li>
+            <li>Ensure CORS is properly configured on your backend</li>
+            <li>The paths to CSS and JS files should be relative to your HTML file</li>
+        </ul>
+    </div>
+    
+    <h2>Need Help?</h2>
+    <p>Refer to the <code>docs/INTEGRATION_GUIDE.md</code> for detailed integration instructions and troubleshooting.</p>
+</body>
+</html>
+
+
+
+
+
+
